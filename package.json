@@ -6,6 +6,7 @@
   "author": "rainqubit",
   "license": "MIT",
   "dependencies": {
-    "discord.js": "^11.4.2"
+    "discord.js": "^11.4.2",
+    "dotenv": "^6.0.0"
   }
 }

@@ -1,5 +1,9 @@
 const Discord = require("discord.js")
 const client = new Discord.Client()
+
+require('dotenv').config()
+const token = process.env.DISCORD_TOKEN
+
 const config = require("./config.json")
 const prefix = config.prefix
 
@@ -7,6 +11,7 @@ const badWords = require("./badWords.json")
 client.on('ready', () =>{
     console.log('bot ready')
 })
+
 
 client.on('message', async msg =>{
     
@@ -48,4 +53,4 @@ client.on('message', async msg =>{
 
 })
 
-client.login(config.token)
+client.login(token)

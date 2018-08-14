@@ -1,7 +1,7 @@
 # Created by https://www.gitignore.io/api/node,linux,visualstudiocode
 
 #config#
-config.json*
+*.env
 
 ### Linux ###
 *~
