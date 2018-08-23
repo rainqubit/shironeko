@@ -13,8 +13,6 @@
 `yarn install`
 5. Create your discord bot user, [here is the tutorial](https://anidiots.guide/getting-started/getting-started-long-version)
 6. Once you got your bot token, create new file named `.env`
-	**Linux / Mac** : `touch .env`
-	**Windows**  : `use gui or something, idk`
 7. Inside `.env` file add this line
 `BOT_TOKEN=123yourSecretBotTokenHere456`
 8. Run it 
