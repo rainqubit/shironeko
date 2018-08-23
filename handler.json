@@ -9,6 +9,11 @@
     {"name":"say", "handler": "say.js"},
     {"name":"reload", "handler": "reload.js"}
     ]
+  },
+  {
+    "name":"ready",
+    "eventHandler":"ready.js",
+    "commands":[]
   }
 ]
 }

@@ -34,13 +34,6 @@ handler.events.forEach(event => {
   }
 })
 
-//i'm ready!! bring it on!
-client.on('ready', () => {
-  client.guilds.forEach(guild => {
-    console.log(`Started at ${guild.name} with ${guild.memberCount} members`)
-  })
-})
-
 // if you forgot this line it'll gives you hours of frustration :insertSmirkEmojiHere:
 client.login(token)
 

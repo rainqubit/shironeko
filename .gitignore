@@ -2,8 +2,6 @@
 
 #config#
 *.env
-*.lock
-
 ### Linux ###
 *~
 
