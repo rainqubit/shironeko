@@ -1,56 +1,50 @@
 const Discord = require("discord.js")
 const client = new Discord.Client()
+const fs = require("fs")
+const Enmap = require("enmap")
 
-require('dotenv').config()
+require("dotenv").config()
 const token = process.env.DISCORD_TOKEN
 
 const config = require("./config.json")
-const prefix = config.prefix
+client.config = config
 
 const badWords = require("./badWords.json")
-client.on('ready', () =>{
-    console.log('bot ready')
+client.on("ready", () => {
+  console.log("bot ready")
 })
 
+  //loop event files
+  fs.readdir("./events/", (err, files) => {
+    if (err) return console.error(err)
+    files.forEach(file => {
+      //ignore file that are not js
+      if (!file.endsWith(".js")) return
 
-client.on('message', async msg =>{
-    
-    //ignore another bot and itself
-    if (msg.author.bot) return
+      const event = require(`./events/${file}`)
 
-    //directly checking the message for offensive words
+      // the event name itself without file extension (.js)
+      let eventName = file.split(".")[0]
 
-    for (const badWord of badWords.words) {
-        if(msg.content.indexOf(badWord) >= 0){
-            msg.channel.send('Tolong dijaga mulutnya')
-            break
-        }    
-    }
+      client.on(eventName, event.bind(null, client))
+      delete require.cache[require.resolve(`./events/${file}`)]
+    })
+  })
 
-    //ignore messages that doesn't contain the prefix
-    if(msg.content.indexOf(prefix) !== 0) return
-    const args = msg.content.trim().split(/ +/g)
-    args.shift()
-    let command = args.shift().toLowerCase()
+  client.commands = new Enmap()
 
-    console.log(command)
+  //loop command files
+  fs.readdir("./commands/", (err, files) => {
+    if (err) return console.error(err)
 
-    //ping command
-    if(command === "ping"){
-        msg.channel.send("pong")
-    }
+    files.forEach(file => {
+      if (!file.endsWith(".js")) return
 
-    //say command
-    if(command === "say"){
-        const sayMsg = args.join(" ")
-        msg.channel.send(sayMsg)
-    }
+      let props = require(`./commands/${file}`)
+      let commandName = file.split(".")[0]
 
-    //avatar command
-    if(command.indexOf('ava') >= 0){
-        msg.reply(msg.author.avatarURL)
-    }
+      client.commands.set(commandName,props)
+    })
+  })
 
-})
-
-client.login(token)
+client.login(token);
