@@ -1,3 +1,5 @@
 {
-    "prefix": "shiro"
+    "prefix": "shiro",
+    "developerRole": "admin",
+    "adminRole": "admin"
 }

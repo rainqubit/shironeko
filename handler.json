@@ -1,0 +1,14 @@
+{
+  "events" : [
+  {
+    "name":"message",
+    "eventHandler":"message.js",
+    "commands":[
+    {"name":"ping", "handler": "ping.js"},
+    {"name":"pong", "handler": "pong.js"},
+    {"name":"say", "handler": "say.js"},
+    {"name":"reload", "handler": "reload.js"}
+    ]
+  }
+]
+}
