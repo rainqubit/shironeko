@@ -4,10 +4,11 @@
     "name":"message",
     "eventHandler":"message.js",
     "commands":[
-    {"name":"ping", "handler": "ping.js"},
-    {"name":"pong", "handler": "pong.js"},
-    {"name":"say", "handler": "say.js"},
-    {"name":"reload", "handler": "reload.js"}
+    {"name":"ping", "handler": "ping.js", "description":"Pong!"},
+    {"name":"pong", "handler": "pong.js", "description":"Ping!"},
+    {"name":"say", "handler": "say.js", "description":"I shall repeat you"},
+    {"name":"reload", "handler": "reload.js", "description":"Reload bot"},
+    {"name":"help", "handler": "help.js", "description":"List all commands and their descriptions"}
     ]
   },
   {
