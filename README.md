@@ -22,7 +22,7 @@
 10. Thats it! if she reply with `pong` then you are good
 
 #### The default prefix is `shiro` change it in `config.json`
-#### For list of commands see `handler.json`  
+#### For list of commands see `handler.json` or type `shiro help`
 
 # Contributing
 ### Every contribution is appreciated with :heart:
