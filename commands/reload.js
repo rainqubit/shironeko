@@ -10,11 +10,11 @@ exports.run = (client, message, args) => {
         //assign it again
         let props = require(`./${command.handler}`)
         client.commands.set(command.name, props)
-        console.log(`Reloading ${command.name} - ${command.handler}`)
+        console.log(`  Reloading command [${command.name}] - [${command.handler}`)
       })
     }
   });
 
   console.log('Reload finished')
-  message.reply('Reload finished nya~')
+  message.channel.send(client.embed(client, 'Done! :white_check_mark:', 'Reload finished', 0x27e57f))
 }

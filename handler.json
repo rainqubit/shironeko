@@ -8,13 +8,19 @@
     {"name":"pong", "handler": "pong.js", "description":"Ping!"},
     {"name":"say", "handler": "say.js", "description":"I shall repeat you"},
     {"name":"reload", "handler": "reload.js", "description":"Reload bot"},
-    {"name":"help", "handler": "help.js", "description":"List all commands and their descriptions"}
+    {"name":"help", "handler": "help.js", "description":"List all commands and their descriptions"},
+    {"name":"prune", "handler": "prune.js", "description":"Let's pretend some chats never happened"}
     ]
   },
   {
     "name":"ready",
     "eventHandler":"ready.js",
     "commands":[]
+  },
+  {
+    "name": "guildMemberAdd",
+    "eventHandler":"newMember.js",
+    "commands": []
   }
 ]
 }

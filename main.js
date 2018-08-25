@@ -26,7 +26,7 @@ handler.events.forEach(event => {
   console.log(`Linked ${event.name} event to ${event.eventHandler}`)
 
   if (event.commands.length > 0) {
-    event.commands.forEach(command => {      
+    event.commands.forEach(command => {
       //linking commands
       let props = require(`./commands/${command.handler}`)
       client.commands.set(command.name, props)
