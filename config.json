@@ -1,5 +1,6 @@
 {
     "prefix": "shiro",
+    "postfix": "nya~",
     "developerRole": "admin",
     "adminRole": "admin"
 }

@@ -12,6 +12,7 @@ let client = new Discord.Client()
 //configsssssss
 client.config = require("./config.json")
 client.handler = handler
+client.embed = require("./embed.js")
 
 client.commands = new Enmap()
 

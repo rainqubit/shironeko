@@ -25,7 +25,7 @@
 #### For list of commands see `handler.json`  
 
 # Contributing
-### Every contribution is apprecated with :heart:
+### Every contribution is appreciated with :heart:
 
 # :cat: :heart:
 
