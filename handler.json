@@ -7,6 +7,7 @@
     {"name":"ping", "handler": "ping.js", "description":"Pong!"},
     {"name":"pong", "handler": "pong.js", "description":"Ping!"},
     {"name":"say", "handler": "say.js", "description":"I shall repeat you"},
+    {"name":"sayd", "handler": "sayd.js", "description":"I shall repeat you, but what did you said again?"},
     {"name":"reload", "handler": "reload.js", "description":"Reload bot"},
     {"name":"help", "handler": "help.js", "description":"List all commands and their descriptions"},
     {"name":"prune", "handler": "prune.js", "description":"Let's pretend some chats never happened"}
