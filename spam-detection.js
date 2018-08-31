@@ -27,6 +27,8 @@ module.exports = {
 
   sameMessages: function(amount){
     let msg = this.messageLog.filter(log => log.author == this.message.author.id)
-    
+    let msgContent = msg.map(log => log.content)
+    let currentMsg = this.message.content
+    let occurance
   }
 }
