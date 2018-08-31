@@ -6,7 +6,7 @@ module.exports = (client, title, content, color, fields) => {
       icon_url: client.user.avatarURL
     },*/
     title: title,
-    description: `${content} ${client.config.postfix}`,
+    description: `${content} ${client.config.suffix}`,
     color: color,
     fields: fields
   }
