@@ -1,8 +1,8 @@
 {
     "prefix": "shiro",
-    "suffix": "nya~",
+    "suffix": "nya",
     "developerRole": "admin",
-    "modRole": "admin",
+    "modRoles": ["admin", "owner"],
     
     "greetChannel" : "general"
 }

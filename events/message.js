@@ -4,13 +4,14 @@ module.exports = (client, message) => {
   if(message.author.bot) return
 
   //spamsadsfdasfasdfa
-  spam.listen(message)
-  if(spam.on(3, 1000)){
-   message.channel.send(client.embed(client,'', `${message.author} chat too fast`))
+  spam.log(message)
+  if(spam.tooQuick(3, 1000)){
+   message.channel.send(client.embed(client,'', `${message.author} chat too fast`, '!', 0xd6453e))
   }
 
   //ignore message without prefix
-  if(message.content.indexOf(client.config.prefix) < 0 ) return
+  if(!message.content.startsWith(client.config.prefix)) return 
+
   const args = message.content.slice(client.config.prefix.length).trim().split(/ +/g)
   const command = args.shift().toLowerCase()
 

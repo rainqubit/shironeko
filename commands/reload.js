@@ -16,5 +16,5 @@ exports.run = (client, message, args) => {
   });
 
   console.log('Reload finished')
-  message.channel.send(client.embed(client, 'Done! :white_check_mark:', 'Reload finished', 0x27e57f))
+  message.channel.send(client.embed(client, 'Done! :white_check_mark:', 'Reload finished',"~", 0x27e57f))
 }
