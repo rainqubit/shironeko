@@ -6,7 +6,10 @@ module.exports = (client, message) => {
   //spamsadsfdasfasdfa
   spam.log(message)
   if(spam.tooQuick(3, 1000)){
-   message.channel.send(client.embed(client,'', `${message.author} chat too fast`, '!', 0xd6453e))
+   message.channel.send(client.embed(client,'', `${message.author}, slowdown`, '!', 0xd6453e))
+  }
+  if(spam.sameMessages(4)){
+    message.channel.send(client.embed(client,'', `${message.author} stop spamming`, '!', 0xd6453e))
   }
 
   //ignore message without prefix
