@@ -4,7 +4,7 @@
     "name":"message",
     "eventHandler":"message.js",
     "commands":[
-    {"name":"null", "handler":"hi.js", "description":""},
+    {"name":"", "handler":"hi.js", "description":""},
     {"name":"ping", "handler": "ping.js", "description":"Pong!"},
     {"name":"pong", "handler": "pong.js", "description":"Ping!"},
     {"name":"say", "handler": "say.js", "description":"I shall repeat you"},
@@ -12,7 +12,8 @@
     {"name":"reload", "handler": "reload.js", "description":"Reload bot"},
     {"name":"run", "handler": "eval.js", "description":"My master teached me how to code nya~"},
     {"name":"help", "handler": "help2.js", "description":"List all commands and their descriptions"},
-    {"name":"prune", "handler": "prune.js", "description":"Let's pretend some chats never happened"}
+    {"name":"prune", "handler": "prune.js", "description":"Let's pretend some chats never happened"},
+    {"name":"guess", "handler": "aki.js", "description":"Akinator"}
     ]
   },
   {

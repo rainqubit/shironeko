@@ -4,13 +4,13 @@ module.exports = (client, message) => {
   if(message.author.bot) return
 
   //spamsadsfdasfasdfa
-  spam.log(message)
+  /*spam.log(message)
   if(spam.tooQuick(3, 1000)){
    message.channel.send(client.embed(client,'', `${message.author}, slowdown`, '!', 0xd6453e))
   }
   if(spam.sameMessages(4)){
     message.channel.send(client.embed(client,'', `${message.author} stop spamming`, '!', 0xd6453e))
-  }
+  }*/
 
   //ignore message without prefix
   if(!message.content.startsWith(client.config.prefix)) return 

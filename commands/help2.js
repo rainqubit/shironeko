@@ -1,7 +1,7 @@
 exports.run = (client, message) => {
   let commands = []
   for(command of client.handler.events[0].commands){
-    if(command.name !== "null"){
+    if(command.name !== ""){
       commands.push({
         name:command.name,
         value:command.description

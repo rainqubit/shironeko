@@ -1,6 +1,7 @@
 const Discord = require("discord.js")
 const _ = require('lodash') // added lodash out of habbit.. welp ¯\_(ツ)_/¯
 const Enmap = require('enmap')
+const aki = require('aki-api')
 require("dotenv").config()
 
 //super secret shiro's three sizes
@@ -12,12 +13,13 @@ let client = new Discord.Client()
 //configsssssss
 client.config = require("./config.json")
 client.handler = handler
-client.embed = require("./embed.js")
+client.embed = require("./utils/embed")
+//aki
+client.aki = aki
 
 client.commands = new Enmap()
 
 //linking events and commands with handlers
-//thanks dhillon for the concept
 handler.events.forEach(event => {
   let eventFile = require(`./events/${event.eventHandler}`)
 

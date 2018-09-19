@@ -7,7 +7,7 @@ exports.run = (client, message, args) => {
   }
 
   if (!modRole){ // role not found{
-    message.channel.send(client.embed(client, `Nyaa~?`, `Who's the master here`, '?', 0x34d8cd))
+    message.channel.send(client.embed(client, `Nyaa~?`, `Who's my master here`, '?', 0x34d8cd))
     console.log(`Mod Role not found`)
     return
   }

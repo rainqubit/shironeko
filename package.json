@@ -6,11 +6,13 @@
   "author": "rainqubit",
   "license": "MIT",
   "dependencies": {
+    "aki-api": "^2.0.11",
     "discord.js": "^11.4.2",
     "dotenv": "^6.0.0",
     "enmap": "^3.1.1",
     "enmap-sqlite": "^2.0.5",
-    "lodash": "^4.17.10"
+    "lodash": "^4.17.10",
+    "spamnya": "^1.1.1"
   },
   "scripts": {
     "start": "node main.js"
