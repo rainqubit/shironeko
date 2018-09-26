@@ -24,6 +24,7 @@ handler.events.forEach(event => {
   let eventFile = require(`./events/${event.eventHandler}`)
 
   //linking events
+  
   client.on(event.name, eventFile.bind(null, client))
   console.log(`Linked ${event.name} event to ${event.eventHandler}`)
 

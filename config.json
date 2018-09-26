@@ -2,7 +2,7 @@
     "prefix": "shiro",
     "suffix": "nya",
     "developerRole": "admin",
-    "modRoles": ["admin", "owner"],
+    "modRoles": ["admin", "Mimin"],
     
     "greetChannel" : "general"
 }
